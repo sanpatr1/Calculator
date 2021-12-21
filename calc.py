@@ -11,3 +11,5 @@ class calc(object):
         return int(self.a) - int(self.b)
     def div(self):
         return int(self.a) / int(self.b)
+    def pow(self):
+        return int(self.a)**int(self.b)

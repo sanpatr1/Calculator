@@ -14,7 +14,9 @@ if __name__ == '__main__':
     val2 = input("Enter value2= ")
     calc1=calc(val1,val2)
     print(calc1.sub())
-    calc1=calc(val2,val1)
-    print(calc1.sub())
+    print(calc1.pow())
+    calc2=calc(val2,val1)
+    print(calc2.sub())
+    print(calc2.pow())
 
 # See PyCharm help at https://www.jetbrains.com/help/pycharm/
