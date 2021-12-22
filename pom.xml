@@ -1,5 +1,10 @@
-<project>
-    <plugins>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>3.8.4</modelVersion>
+  <artifactId>project1</artifactId>
+  <packaging>pom</packaging>
+
+  <build>
+     <plugins>
         <plugin>
             <groupId>org.codehaus.mojo</groupId>
             <artifactId>exec-maven-plugin</artifactId>
@@ -12,6 +17,11 @@
                         <arguments>
                             <argument>main.py</argument>
                         </arguments>
+                        <environmentVariables>
+                           <PYTHONPATH>
+                             /usr/bin/python/   <!-- added PYTHONPATH -->
+                           </PYTHONPATH>
+                        </environmentVariables>						
                     </configuration>
                     <id>python_build</id>
                     <phase>generate-resources</phase>
@@ -21,5 +31,6 @@
                 </execution>
             </executions>
         </plugin>
-    </plugins>
+     </plugins>
+  </build>
 </project>
